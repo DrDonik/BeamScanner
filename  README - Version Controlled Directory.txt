@@ -2,6 +2,7 @@ This directory is under subversion control. In order to get a working copy for y
 
 $ svn checkout svn://iapbp111.unibe.ch/LabView/BeamScanner/trunk
 
+Note: There exist several branches of this project in LabView/Beamscanner/branches.
 Once checked out, to later update your local working copy to the latest revision, use
 
 $ svn update
