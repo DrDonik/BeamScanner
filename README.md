@@ -15,5 +15,5 @@ This software is in productive use. When coding, make sure you don't brake the e
 
 ### Who do I talk to? ###
 
-This repository is part of the DTU Fotonik "biophotonics" team.
-The main responsible is Dominik Marti: domar@fotonik.dtu.dk
+This repository is part of the DTU Health Tech "biophotonics" team.
+The main responsible is Dominik Marti: domar@dtu.dk
