@@ -1,5 +1,8 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="20008000">
+	<Property Name="CCSymbols" Type="Str"></Property>
+	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -30,6 +33,8 @@
 		<Item Name="SpectrumViewer.vi" Type="VI" URL="../SpectrumViewer.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
+				<Item Name="Average.vi" Type="VI" URL="/&lt;vilib&gt;/GPower/Numeric/Library/Average.vi"/>
+				<Item Name="AvrgDBL.vi" Type="VI" URL="/&lt;vilib&gt;/GPower/Numeric/Library/Average/AvrgDBL.vi"/>
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
 				<Item Name="Calculate Frames per Second.vi" Type="VI" URL="/&lt;vilib&gt;/vision/Calculate Frames per Second.vi"/>
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
@@ -276,8 +281,6 @@
 				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
 				<Item Name="GetHelpDir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetHelpDir.vi"/>
 				<Item Name="GetRTHostConnectedProp.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetRTHostConnectedProp.vi"/>
-				<Item Name="GPError.lvlib" Type="Library" URL="/&lt;vilib&gt;/GPower/Error/GPError.lvlib"/>
-				<Item Name="GPNumeric.lvlib" Type="Library" URL="/&lt;vilib&gt;/GPower/Numeric/GPNumeric.lvlib"/>
 				<Item Name="Image Type" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Image Type"/>
 				<Item Name="IMAQ ArrayToImage" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ ArrayToImage"/>
 				<Item Name="IMAQ Attribute.vi" Type="VI" URL="/&lt;vilib&gt;/vision/driver/imaqhl.llb/IMAQ Attribute.vi"/>
@@ -360,8 +363,9 @@
 				<Item Name="SessionLookUp.vi" Type="VI" URL="/&lt;vilib&gt;/vision/driver/DLLCalls.llb/SessionLookUp.vi"/>
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
 				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
+				<Item Name="SetError.vi" Type="VI" URL="/&lt;vilib&gt;/GPower/Error/Library/SetError.vi"/>
+				<Item Name="SetWarning.vi" Type="VI" URL="/&lt;vilib&gt;/GPower/Error/Library/SetWarning.vi"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
-				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="subBuildXYGraph.vi" Type="VI" URL="/&lt;vilib&gt;/express/express controls/BuildXYGraphBlock.llb/subBuildXYGraph.vi"/>
 				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
 				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
@@ -378,15 +382,14 @@
 				<Item Name="Write File+ (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write File+ (string).vi"/>
 				<Item Name="Write Spreadsheet String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Spreadsheet String.vi"/>
 			</Item>
+			<Item Name="Average_Spectrum_XY.vi" Type="VI" URL="../OCM/resources/Average_Spectrum_XY.vi"/>
+			<Item Name="global.vi" Type="VI" URL="../OCM/OCM/private/global.vi"/>
 			<Item Name="imaq.dll" Type="Document" URL="imaq.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="NETOmniDriver-NET20.dll" Type="Document" URL="../../../../../../Program Files (x86)/Ocean Optics/OmniDriverSPAM/OOI_HOME/NETOmniDriver-NET20.dll"/>
 			<Item Name="NETOmniDriver-NET20.dll" Type="Document" URL="../../../../../../Program Files/Ocean Optics/OmniDriver/OOI_HOME/NETOmniDriver-NET20.dll"/>
-			<Item Name="NETOmniDriver-NET40" Type="VI" URL="NETOmniDriver-NET40">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
 			<Item Name="NETOmniDriver-NET40.dll" Type="Document" URL="../../../../../../Program Files/Ocean Optics/OmniDriver/OOI_HOME/NETOmniDriver-NET40.dll"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -401,6 +404,7 @@
 			<Item Name="QEPro_SampleMatch.vi" Type="VI" URL="../../../../../Program Files/Ocean Optics/OmniDriver/OOI_HOME/QEPro_SampleMatch.vi"/>
 			<Item Name="QEPro_Trigger.vi" Type="VI" URL="../../../../../Program Files/Ocean Optics/OmniDriver/OOI_HOME/QEPro_Trigger.vi"/>
 			<Item Name="QEPro_TriggerChange.vi" Type="VI" URL="../../../../../Program Files/Ocean Optics/OmniDriver/OOI_HOME/QEPro_TriggerChange.vi"/>
+			<Item Name="Sum_Spectrum_XY.vi" Type="VI" URL="../OCM/resources/Sum_Spectrum_XY.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
